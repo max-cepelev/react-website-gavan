@@ -1,0 +1,50 @@
+.tabsSlider {
+    height: 100vh;
+    min-height: 1000px;
+    max-height: 1000px;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: relative;
+    &__header {
+        position: absolute;
+        width: 100vw;
+        height: 80px;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns:  1fr repeat(4, 285px) 1fr;
+        column-gap: 5px;
+        justify-content: center;
+        z-index: 2;
+    }
+    &__button {
+        width: 100%;
+        height: 100%;
+        background: rgba(196, 196, 196, 0.38);
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        font-weight: 700;
+        color: #ffffff;
+        border: none;
+        font-size: var(--body-text-size);
+        &:first-child {
+            margin-left: 5px;
+        }
+        &:last-child {
+            margin-right: 5px;
+        }
+        &.active {
+            background: rgba(0, 0, 0, 0);
+        }
+    }
+    &__border {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(196, 196, 196, 0.38);
+        &:last-child {
+            border-bottom-left-radius: 8px;
+        }
+        &:first-child {
+            border-bottom-right-radius: 8px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "О доме",
+        "images" : ["/images/about_home/1.png", "/images/about_home/2.jpg", "/images/about_home/3.jpg", "/images/about_home/4.jpg", "/images/about_home/5.jpg"]
+    },
+    {
+        "id": 2,
+        "name": "Во дворе",
+        "images" : ["/images/yard/1.png", "/images/yard/2.jpg", "/images/yard/3.jpg", "/images/yard/4.jpg"]
+    }
+]

@@ -1,0 +1,53 @@
+.submain {
+    min-height: 700px;
+    position: relative;
+    &__shape-divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        svg {
+            position: relative;
+            display: block;
+            width: calc(164% + 1.3px);
+            height: 340px;
+            transform: rotateY(180deg);
+        }
+    }
+    &__shape-fill {
+        fill: var(--main-color);
+    }
+    &__title {
+        z-index: 3;
+        color: #ffffff;
+        font-weight: 700;
+        h2, p {
+            margin: 0;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            margin-top: 30px;
+            font-size: 22px;
+        }
+    }
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .submain__shape-divider svg {
+        width: calc(222% + 1.3px);
+        height: 206px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .submain__shape-divider svg {
+        width: calc(279% + 1.3px);
+        height: 163px;
+    }
+}

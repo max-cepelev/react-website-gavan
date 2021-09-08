@@ -1,0 +1,42 @@
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.swiper-wrapper {
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.swiper-slide{
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.swiper-container-thumbs {
+    margin-top: 50px;
+    cursor: pointer;
+    img {
+        filter: opacity(0.3);
+    }
+    .swiper-slide-thumb-active {
+        img {
+            filter: opacity(1);
+        }
+    }
+}

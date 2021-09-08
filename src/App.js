@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
+import CardPage from './components/pages/CardPage';
+import MainPage from './components/pages/MainPage';
+import PlansPage from './components/pages/PlansPage';
+import ScrollToTop from './components/ScrollToTop'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop/>
+      <Switch>
+        <Route path="/" exact component={MainPage}/>
+        <Route path="/plans" component={PlansPage}/>
+        <Route path="/layouts/:id" render={
+          ({match}) => <CardPage id={match.params.id - 1}/>}/>
+      </Switch>
+    </Router >
   );
 }
 
