@@ -1,65 +1,72 @@
 .comfortable {
-    display: flex;
-    padding: 120px 15px 165px 15px;
+    padding: 120px 0 165px 0;
     background: rgba(0, 0, 0, 0.95);
+    background: url(./background.jpg) center center/cover no-repeat;
     &__container {
-        max-width: 1200px;
         display: grid;
-        margin: 0 auto;
-        grid-template-columns: max(620px) max(440px);
+        grid-template-columns: 1fr 1fr;
         justify-content: center;
-        align-items:flex-end;
+        align-items:flex-start;
         gap: 80px;
     }
     &__img {
         width: 100%;
-        height: 100%;
-        max-height: 410px;
+        max-width: 616px;
+        height: auto;
         grid-column: 1/2;
         position: relative;
-        box-shadow: 2px 0px 15px 6px var(--main-color);
         border-radius: 8px;
         img {
-            left: -10px;
-            top: 10px;
-            position: absolute;
+            position: relative;
             width: 100%;
         }
+        &::before {
+            content: "";
+            position: absolute;
+            width: calc(100% - 5px);
+            height: calc(100% - 10px);
+            right: -15px;
+            top: -15px;
+            border: 3px solid var(--main-color);
+            border-radius: 8px;
+        }
     }
-
     &__text {
         grid-column: 2/3;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
-        max-width: 525px;
-        h2 {
-            color: var(--main-color);
-            font-size: 50px;
-            font-weight: 700;
-        }
-        p {
-            color: #ffffff;
-            font-size: 25px;
-            font-weight: 400;
-        }
-        h2, p {
-            margin: 0;
-            margin-bottom: 35px;
-        }
-        button {
-            cursor: pointer;
-            color:#ffffff;
+    }
+}
 
-            box-shadow: 0 10px 20px -7px rgb(0 0 0 / 50%);
-            width: 100%;
-            height: 85px;
-            max-width: 400px;
-            border: none;
-            background: linear-gradient(180deg, #009EEA 0%, #0085CA 100%);
-            border-radius: 8px;
-            font-size: 20px;
+@media (max-width: 1023px) {
+    .comfortable {
+        padding-top: 80px;
+        padding-bottom: 100px;
+        &__container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            padding-right: 25px;
+        }
+        &__text {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin: 0 auto;
+        }
+        &__img {
+            grid-row: 1/2;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .comfortable {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        &__container {
+            gap: 30px;
         }
     }
 }

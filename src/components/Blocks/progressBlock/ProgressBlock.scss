@@ -1,0 +1,143 @@
+.progress {
+    padding: 90px 15px;
+    background: url(./background.jpg) center center/cover no-repeat;
+    &__container {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &__dates {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+    &__bar {
+        height: 45px;
+        width: 100%;
+        background-color: #FFFFFF;
+        border-radius: 100px;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--main-color);
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            height: 100%;
+            width: 0;
+            position: relative;
+            .text {
+                font-weight: bold;
+                margin: 0;
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -45px;
+                height: 190%;
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 85px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 35px;
+        row-gap: 70px;
+        position: relative;
+    }
+    &__link {
+        min-width: 250px;
+        width: 29%;
+        max-width: 320px;
+        height: 268px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        scroll-snap-align: start;
+        &-img {
+            width: 100%;
+            height: 100%;
+            max-height: 210px;
+            border-radius: 8px;
+            border: 2px solid var(--main-color);
+            position: relative;
+            transition: all 0.5s;
+            &:hover {
+                box-shadow: 0px 0px 10px 3px var(--main-color);
+            }
+            img {
+                top: 10px;
+                left: 10px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+        &-text {
+            margin: 0;
+            margin-top: 12px;
+        }
+    }
+}
+
+.text {
+    span {
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1023px) {
+    .progress {
+        padding: 60px 15px;
+        &__bar {
+            height: 30px;
+            span {
+                img {
+                    right: -30px;
+                }
+            }
+        }
+        &__dates {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .progress {
+        padding: 40px 15px;
+        &__wrapper {
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            flex-wrap: nowrap;
+            margin-top: 45px;
+            column-gap: 15px;
+            &::-webkit-scrollbar {
+                height: 0;
+            }
+        }
+        &__link {
+            min-width: 140px;
+            max-height: 132px;
+            padding-left: 3px;
+            &-img {
+                img {
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}

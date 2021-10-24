@@ -1,0 +1,39 @@
+.video {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    padding: 0 5vw;
+    height: auto;
+    &__wrapper {
+        position: relative;
+        padding-top: 56.25%;
+        iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: #ffffff;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 50px;
+        cursor: pointer;
+        transition: all .3s;
+        z-index: 999;
+        &:hover {
+            filter: drop-shadow(0 0 2px #ffffff)
+        }
+    }
+}

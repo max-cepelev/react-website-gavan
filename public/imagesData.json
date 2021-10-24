@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "О доме",
+        "images" : ["/images/about_home/1.jpg", "/images/about_home/2.jpg", "/images/about_home/3.jpg", "/images/about_home/4.jpg", "/images/about_home/5.jpg"]
+    },
+    {
+        "id": 2,
+        "name": "Во дворе",
+        "images" : ["/images/yard/1.jpg", "/images/yard/2.jpg", "/images/yard/3.jpg", "/images/yard/4.jpg"]
+    },
+    {
+        "id": 3,
+        "name": "В подъезде",
+        "images" : ["/images/entrance/1.jpg", "/images/entrance/2.jpg", "/images/entrance/3.jpg", "/images/entrance/4.jpg", "/images/entrance/5.jpg", "/images/entrance/6.jpg", "/images/entrance/7.jpg", "/images/entrance/8.jpg"]
+    },
+    {
+        "id": 4,
+        "name": "В квартире",
+        "images" : ["/images/apartment/1.jpg", "/images/apartment/2.jpg", "/images/apartment/3.jpg", "/images/apartment/4.jpg", "/images/apartment/5.jpg"]
+    },
+    {
+        "id": 5,
+        "name": "Отделка",
+        "images" : ["/images/decoration/1.jpg", "/images/decoration/2.jpg", "/images/decoration/3.jpg", "/images/decoration/4.jpg", "/images/decoration/5.jpg"]
+    },
+    {
+        "id": 6,
+        "name": "Мобильная версия",
+        "images" : ["/images/mobile/1.jpg", "/images/mobile/2.jpg", "/images/mobile/3.jpg", "/images/mobile/4.jpg"]
+    }
+]

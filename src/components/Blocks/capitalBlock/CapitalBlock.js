@@ -1,14 +1,14 @@
 import React from 'react'
 import './capitalBlock.scss'
-import image from './capital.png'
+import image from './capital.jpg'
 
 export default function CapitalBlock() {
     return (
         <section className="capital">
-            <div className="capital__container">
+            <div className="capital__container container">
                 <div className='capital__text'>
-                    <h2>Столичная Гавань</h2>
-                    <ul>
+                    <h2 className="subtitle">Столичная Гавань</h2>
+                    <ul className="text">
                         <li>Отдых и спорт в Бассейне Олимпия</li>
                         <li>Приятный шоппинг в ТРК Столица</li>
                         <li>Кино в любое время в кинотеатре Киномакс</li>

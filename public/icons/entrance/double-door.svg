@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="512"
+   height="512"
+   viewBox="0 0 383.99999 383.99999"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg10"
+   sodipodi:docname="double-door.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.83071236"
+     inkscape:cx="368.35855"
+     inkscape:cy="430.35353"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8" />
+  <g
+     transform="matrix(0.07435699,0,0,-0.07435699,0,380.70748)"
+     fill="#000000"
+     stroke="none"
+     id="g8">
+    <path
+       d="m 317.14196,5071.5741 c -11,-6 -26,-18 -32,-26 -10,-13 -13,-520 -13,-2464 V 133.57412 h -101 c -98,0 -101,-1 -130,-29 -17,-17.999999 -29,-39.999999 -29,-55.999999 0,-16 12,-38 29,-56.0000003 l 29,-28.9999997 h 2502.00004 2502 l 29,28.9999997 c 38,38.0000003 38,74.0000003 0,111.9999993 -29,28 -32,29 -130,29 h -101 V 2577.5741 c 0,1344 -3,2452 -6,2461 -18,47 90,45 -2296,45 -1597.00004,-1 -2239.00004,-4 -2253.00004,-12 z m 2165.00004,-2548 V 133.57412 h -85 -85 V 2411.5741 c -1,1774 -3,2281 -13,2293 -30,39 -33,39 -837,39 -804.00004,0 -807.00004,0 -837.00004,-39 -10,-12 -12,-519 -13,-2293 V 133.57412 h -85 -85 v 2389.99998 2390 h 1020.00004 1020 z m 2220,0 V 133.57412 h -85 -85 V 2411.5741 c -1,1774 -3,2281 -13,2293 -30,39 -33,39 -837,39 -804,0 -807,0 -837,-39 -10,-12 -12,-519 -13,-2293 V 133.57412 h -85 -85 v 2389.99998 2390 h 1020 1020 z m -2560,-170 V 133.57412 h -680 -680.00004 v 2219.99998 2220 h 680.00004 680 z m 2220,0 V 133.57412 h -680 -680 v 2219.99998 2220 h 680 680 z"
+       id="path2"
+       style="fill:#0085ca;fill-opacity:1" />
+    <path
+       d="m 1856.142,2976 c -17,-8 -36,-26 -43,-42 -8,-22 -11,-166 -9,-561 l 3,-532 22,-23 c 31,-30 84,-30 118,2 l 25,23 v 547 547 l -22,20 c -32,29 -58,34 -94,19 z"
+       id="path4"
+       style="fill:#0085ca;fill-opacity:1" />
+    <path
+       d="m 3232.142,2983 c -8,-3 -25,-15 -37,-26 l -23,-20 v -547 -547 l 25,-23 c 34,-32 87,-32 118,-2 l 22,23 3,532 c 2,396 -1,539 -9,561 -8,17 -26,34 -45,42 -19,8 -35,14 -36,13 -2,0 -10,-3 -18,-6 z"
+       id="path6"
+       style="fill:#0085ca;fill-opacity:1" />
+  </g>
+</svg>

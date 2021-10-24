@@ -1,0 +1,182 @@
+.developer {
+    padding: 70px 15px;
+    background: url(./background.jpg) center center/cover no-repeat;
+    &__container {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    &__about {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 115px;
+        img {
+            max-width: 395px;
+            max-height: 350px;
+        }
+        &-text {
+            max-width: 670px;
+            p {
+                color: #282828;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__objects {
+        margin-top: 75px;
+        &-title {
+            margin-left: 25px;
+            font-size: clamp(25px, 3vw, 40px);
+            color: #282828;
+        }
+        &-wrapper {
+            margin-top: 55px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 70px;
+        }
+        &-item {
+            width: 100%;
+            max-width: 270px;
+            height: 200px;
+            margin-bottom: 50px;
+            scroll-snap-align: start;
+        }
+        &-img {
+            min-width: 100%;
+            height: 100%;
+            max-height: 200px;
+            border-radius: 8px;
+            position: relative;
+            border: 2px solid var(--main-color);
+            margin-bottom: 20px;
+            img {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+        &-text {
+            color: #282828;
+            margin: 0;
+            margin-left: 10px;
+            font-size: clamp(10px, 1.8vw, 19px);
+        }
+    }
+    &__button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    &__documents {
+        margin-top: 55px;
+        padding: 60px 55px;
+        border-radius: 8px;
+        background: url(./docsback.jpg) center center/cover no-repeat;
+        &-title {
+            font-size: clamp(25px, 3vw, 40px);
+            color: #FFFFFF;
+        }
+        &-list {
+            list-style-type: none;
+            margin-top: 50px;
+        }
+        &-item {
+            position: relative;
+            margin-top: 40px;
+            font-size: 20px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 25px;
+                height: 40px;
+                background-image: url(./flag.svg);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            a {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .developer {
+        padding: 50px 15px;
+        &__about {
+            margin-top: 50px;
+            justify-content: center;
+        }
+        &__objects {
+            margin-top: 50px;
+            &-title {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .developer {
+        padding: 30px 15px;
+        &__about {
+            margin-top: 30px;
+            img {
+                max-width: 260px;
+            }
+        }
+        &__objects {
+            margin-top: 25px;
+            &-wrapper {
+                margin-top: 30px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                scroll-snap-stop: always;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: 100%;
+                column-gap: 15px;
+                &::-webkit-scrollbar {
+                    height: 0;
+                }
+            }
+            &-item {
+                height: 250px;
+                margin-bottom: 20px;
+                min-width: 140px;
+                max-height: 150px;
+                padding-left: 3px;
+            }
+            &-img {
+                max-height: 100px;
+                img {
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+        }
+        &__documents {
+            margin-top: 30px;
+            padding: 35px 30px;
+            &-item {
+                min-height: 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}

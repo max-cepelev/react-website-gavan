@@ -4,19 +4,18 @@ import MaskedInput from 'react-text-mask'
 import * as Yup from 'yup';
 import './contactForm.scss'
 
-
 const MyPhoneInput = ({ label, ...props }) => {
+
     const [field, meta] = useField(props);
-    console.log(field)
     return (
         <>
             {/* <label htmlFor={props.id || props.name}>{label}</label> */}
             <MaskedInput
                 guide={false}
-                mask={['(', /[9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
-                className="text-input" {...field} {...props} />
+                mask={['+','7',' ', '(', /[9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
+                className="contactForm__input text" {...field} {...props} />
             {meta.touched && meta.error ? (
-                <div className="error">{meta.error}</div>
+                <p className="contactForm__error">{meta.error}</p>
             ) : null}
         </>
     );
@@ -27,51 +26,74 @@ const MyTextInput = ({ label, ...props }) => {
     return (
         <>
             {/* <label htmlFor={props.id || props.name}>{label}</label> */}
-            <input className="text-input" {...field} {...props} />
+            <input className="contactForm__input text" {...field} {...props} />
             {meta.touched && meta.error ? (
-                <div className="error">{meta.error}</div>
+                <p className="contactForm__error">{meta.error}</p>
             ) : null}
         </>
     );
 };
 
+const ContactForm = ({title, text, onClose}) => {
 
-const ContactForm = () => {
+    const utmData = JSON.parse(window.localStorage.getItem('utmData')) || []
+
     return (
         <div className="contactForm">
-            <h1>Узнать цены</h1>
-            <p>Чтобы узнать цены и свободные квартиры, заполните форму</p>
+            <h2 className="subtitle" >{title}</h2>
+            <p className="text">{text}</p>
             <Formik
                 initialValues={{
                     phone: '',
-                    firstName: '',
+                    name: '',
                     email: '',
+                    source: utmData.utm_source || '',
+                    medium: utmData.utm_medium || '',
+                    content: utmData.utm_content || '',
+                    campaign: utmData.utm_campaign || ''
                 }}
                 validationSchema={Yup.object({
                 phone: Yup.string()
-                    .min(15, 'Неверный номер')
+                    .min(18, 'Недостаточно цифр')
                     .required('Обязательное поле'),
-                firstName: Yup.string()
+                name: Yup.string()
                     .max(20, 'Must be 15 characters or less'),
                 email: Yup.string()
                     .email('Неверный email'),
                 })}
                 onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
+                    // console.log(values);
+                    fetch("./amo/amocrm.sender.php", {
+                        method: "POST",
+                        body: JSON.stringify(values),
+                        headers:{
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (!response.ok){
+                            throw new Error('Network response was not ok.');
+                        }
+                    })
+                    .catch((err) => {
+                        alert(err);
+                    })
+                    setTimeout(() => {
+                        // alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+                        onClose();
+                    }, 400);
                 }}
             >
-            <Form>
+            <Form >
                 <MyPhoneInput
                     label="Телефон"
                     name="phone"
                     type="tel"
                     placeholder="+7 (999) 999-99-99"/>
                 <MyTextInput
-                    label="First Name"
-                    name="firstName"
+                    label="Name"
+                    name="name"
                     type="text"
                     placeholder="Ваше имя"
                 />
@@ -81,9 +103,10 @@ const ContactForm = () => {
                     type="email"
                     placeholder="Ваш email"
                 />
-                <button type="submit">Отправить</button>
+                <button className="button" type="submit">Отправить</button>
             </Form>
             </Formik>
+            <div onClick={onClose} className="contactForm__close">&#10006;</div>
         </div>
     );
 };
