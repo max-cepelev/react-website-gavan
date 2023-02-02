@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Апрель 2021",
+        "description": "Подготовительные работы",
+        "images": ["/images/progress/april/1.jpg", "/images/progress/april/2.jpg", "/images/progress/april/3.jpg", "/images/progress/april/4.jpg"]
+    },
+    {
+        "id": 2,
+        "name": "Май 2021",
+        "description": "На строительной площадке нового дома Гавань  - самое начало строительного цикла. Стойплощадка огорожена, выровнена, идет подготовка к устройству фундамента.",
+        "images": ["/images/progress/may/1.jpg", "/images/progress/may/2.jpg", "/images/progress/may/3.jpg", "/images/progress/may/4.jpg", "/images/progress/may/5.jpg"]
+    },
+    {
+        "id": 3,
+        "name": "Июнь 2021",
+        "description": "Заливка фундаментной плиты и стен подземного паркинга. Монтаж шпунтового ряда подпорной стены.",
+        "images": ["/images/progress/june/1.jpg", "/images/progress/june/2.jpg", "/images/progress/june/3.jpg", "/images/progress/june/4.jpg", "/images/progress/june/5.jpg"]
+    },
+    {
+        "id": 4,
+        "name": "Июль 2021",
+        "description": "Ведутся работы по устройству фундамента подземной парковки и устройству монолитных стен подвального помещения дома.",
+        "images": ["/images/progress/july/1.jpg", "/images/progress/july/2.jpg", "/images/progress/july/3.jpg", "/images/progress/july/4.jpg"]
+    },
+    {
+        "id": 5,
+        "name": "Август 2021",
+        "description": "Частично готова плита перекрытия подвального помещения.<br />Ведется устройство вертикальных колонн 1 этажа.<br />Завершено устройство вертикальных конструкций подземного паркинга.",
+        "images": ["/images/progress/august/1.jpeg", "/images/progress/august/2.jpeg", "/images/progress/august/3.jpeg", "/images/progress/august/4.jpeg", "/images/progress/august/5.jpeg", "/images/progress/august/6.jpeg"]
+    },
+    {
+        "id": 6,
+        "name": "Сентябрь 2021",
+        "description": "Завершены работы по устройству подземного паркинга.<br />Устройство опалубки для плиты перекрытия 2-го этажа.",
+        "images": ["/images/progress/september/1.jpg", "/images/progress/september/2.jpg", "/images/progress/september/3.jpg", "/images/progress/september/4.jpg", "/images/progress/september/5.jpg"]
+    }
+]
